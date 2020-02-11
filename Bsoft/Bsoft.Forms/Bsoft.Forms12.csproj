@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8598F7FD-CF7F-4F30-83C4-AC188B8DDD21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bsoft.Forms</RootNamespace>
+    <AssemblyName>Syscom12</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fsButton, Version=1.0.3566.36784, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\fsButton.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmDbTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDbTool.designer.cs">
+      <DependentUpon>frmDbTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInputBox.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MyInputBox.designer.cs">
+      <DependentUpon>MyInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoneyCounter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoneyCounter.designer.cs">
+      <DependentUpon>frmMoneyCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBox.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBox.designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTreeView.Designer.cs">
+      <DependentUpon>frmTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxMy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDbTool.resx">
+      <DependentUpon>frmDbTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInputBox.resx">
+      <DependentUpon>MyInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoneyCounter.resx">
+      <DependentUpon>frmMoneyCounter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTreeView.resx">
+      <DependentUpon>frmTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bosft.Controls\Bosft.Controls10.csproj">
+      <Project>{1C39C6DB-C329-461A-94F4-0445911055E3}</Project>
+      <Name>Bosft.Controls10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Common\Bsoft.Common1.csproj">
+      <Project>{4F0D0B88-21A6-4EF5-A888-FFFD23A37CF8}</Project>
+      <Name>Bsoft.Common1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.DataCommon\Bsoft.DataCommon.csproj">
+      <Project>{E5CE0F25-294E-4F31-98BE-11625FE0B326}</Project>
+      <Name>Bsoft.DataCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Data\Bsoft.Data2.csproj">
+      <Project>{84C2624F-732C-4B51-AE62-315ABEAD6C7D}</Project>
+      <Name>Bsoft.Data2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Design\Bsoft.Design11.csproj">
+      <Project>{A53B2E33-46E6-4509-8910-908AF5D4BB22}</Project>
+      <Name>Bsoft.Design11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Languages\Languages\Bsoft.Languages5.csproj">
+      <Project>{A7CA1972-5A6A-4819-9BA4-3B9BE0D68A96}</Project>
+      <Name>Bsoft.Languages5</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" -n --newline-flush</PostBuildEvent>
+  </PropertyGroup>
+</Project>

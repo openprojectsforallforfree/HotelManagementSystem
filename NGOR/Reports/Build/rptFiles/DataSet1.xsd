@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TablePropName="DataTable1" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nikaye" msprop:Generator_UserColumnName="Nikaye" msprop:Generator_ColumnPropNameInRow="Nikaye" msprop:Generator_ColumnVarNameInTable="columnNikaye" msprop:Generator_ColumnPropNameInTable="NikayeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DartaMiti" msprop:Generator_UserColumnName="DartaMiti" msprop:Generator_ColumnPropNameInRow="DartaMiti" msprop:Generator_ColumnVarNameInTable="columnDartaMiti" msprop:Generator_ColumnPropNameInTable="DartaMitiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AbadataMiti" msprop:Generator_UserColumnName="AbadataMiti" msprop:Generator_ColumnPropNameInRow="AbadataMiti" msprop:Generator_ColumnVarNameInTable="columnAbadataMiti" msprop:Generator_ColumnPropNameInTable="AbadataMitiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DartaNumber" msprop:Generator_UserColumnName="DartaNumber" msprop:Generator_ColumnPropNameInRow="DartaNumber" msprop:Generator_ColumnVarNameInTable="columnDartaNumber" msprop:Generator_ColumnPropNameInTable="DartaNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LastRenewDate" msprop:Generator_UserColumnName="LastRenewDate" msprop:Generator_ColumnPropNameInRow="LastRenewDate" msprop:Generator_ColumnVarNameInTable="columnLastRenewDate" msprop:Generator_ColumnPropNameInTable="LastRenewDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RenewDuration" msprop:Generator_UserColumnName="RenewDuration" msprop:Generator_ColumnPropNameInRow="RenewDuration" msprop:Generator_ColumnVarNameInTable="columnRenewDuration" msprop:Generator_ColumnPropNameInTable="RenewDurationColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,28 @@
+
+Purchase Report
+all purchased items only , purchage id wise
+
+Sale Report
+all sold items only , sales id wise
+
+Stock Report
+all stock , complete report
+
+Damage
+Loss
+Consumed
+
+views
+productstockview is a temp view
+producatsall may not be needed this is to be changed to purchase report
+May be for reports dont use generateselectsql instead use a view !!!
+
+prdctsstkview=>inv_purchase
+prdctsall=>productsstockview
+productstockview=>invpurchase
+salesview=>invsales
+invstockview=>invstock
+
+
+
+

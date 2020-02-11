@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BsoftNepaliDate", "BsoftNepaliDate.csproj", "{EED00AEE-AEDA-4904-A92F-28DC8B280E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "..\test\test.csproj", "{77BB4EE2-0249-4AA8-AB8E-44C3FF1E953B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EED00AEE-AEDA-4904-A92F-28DC8B280E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED00AEE-AEDA-4904-A92F-28DC8B280E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED00AEE-AEDA-4904-A92F-28DC8B280E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED00AEE-AEDA-4904-A92F-28DC8B280E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77BB4EE2-0249-4AA8-AB8E-44C3FF1E953B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77BB4EE2-0249-4AA8-AB8E-44C3FF1E953B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77BB4EE2-0249-4AA8-AB8E-44C3FF1E953B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77BB4EE2-0249-4AA8-AB8E-44C3FF1E953B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+﻿--Comments start with --
+--case insensitive
+--pipe delimite or in a new line
+--List : |updatedb| refreshmenu  | deleteviews
+updateDb
+deleteviews

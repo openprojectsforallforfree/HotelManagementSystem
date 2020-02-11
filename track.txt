@@ -1,0 +1,15 @@
+9:15 PM 6/1/2011 Start NGOR
+sends email only once a day to bajrasoft@gmail.com
+checks 2 type of registration keys, full and advanced.The creed is that full key should not be given at any cost before full payment.
+performance: loads list only once so less flicker
+=> -ve due means amount to return
+=> +ve means amount to take yet
+=> -ve amount means the amout was refunded
+=> if amt is -ve tender amt,return amt should be -ve
+=> if amt is +ve tender amt,return amt should be +ve
+
+=> -ve tender => we gave. +ve=> they gave
+=> -ve return => they gave. +ve=> we gave
+
+all customers with booking status booked and occupied will be visible.
+

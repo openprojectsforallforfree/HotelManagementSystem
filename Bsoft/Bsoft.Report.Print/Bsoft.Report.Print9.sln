@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bsoft.Report.Print9", "Bsoft.Report.Print9.csproj", "{9AAD21BA-AC88-44B0-BB48-1EEDB201B503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testBill", "..\testBill\testBill.csproj", "{909D90DF-3A9D-4915-86CC-36114A2EA0CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AAD21BA-AC88-44B0-BB48-1EEDB201B503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAD21BA-AC88-44B0-BB48-1EEDB201B503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AAD21BA-AC88-44B0-BB48-1EEDB201B503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AAD21BA-AC88-44B0-BB48-1EEDB201B503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{909D90DF-3A9D-4915-86CC-36114A2EA0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909D90DF-3A9D-4915-86CC-36114A2EA0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909D90DF-3A9D-4915-86CC-36114A2EA0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909D90DF-3A9D-4915-86CC-36114A2EA0CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

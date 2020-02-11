@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D850DB4-F56E-4A70-AB00-88828B080B33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syscom10, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bsoft\Bosft.Controls\obj\Debug\Syscom10.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="snippets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bsoft\Bosft.Controls\Bosft.Controls10.csproj">
+      <Project>{1C39C6DB-C329-461A-94F4-0445911055E3}</Project>
+      <Name>Bosft.Controls10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.AppCom\Bsoft.AppCom.csproj">
+      <Project>{EB28F253-11A8-4C11-86A5-8F1B5C10E036}</Project>
+      <Name>Bsoft.AppCom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Common\Bsoft.Common1.csproj">
+      <Project>{4F0D0B88-21A6-4EF5-A888-FFFD23A37CF8}</Project>
+      <Name>Bsoft.Common1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.CrystalReport\Bsoft.CrystalReport.csproj">
+      <Project>{B82F35E8-0563-42F7-AFC6-E3F8B39B1501}</Project>
+      <Name>Bsoft.CrystalReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Data\Bsoft.Data2.csproj">
+      <Project>{84C2624F-732C-4B51-AE62-315ABEAD6C7D}</Project>
+      <Name>Bsoft.Data2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Date\Bsoft.Date3.csproj">
+      <Project>{EED00AEE-AEDA-4904-A92F-28DC8B280E2A}</Project>
+      <Name>Bsoft.Date3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Design\Bsoft.Design11.csproj">
+      <Project>{A53B2E33-46E6-4509-8910-908AF5D4BB22}</Project>
+      <Name>Bsoft.Design11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Forms\Bsoft.Forms12.csproj">
+      <Project>{8598F7FD-CF7F-4F30-83C4-AC188B8DDD21}</Project>
+      <Name>Bsoft.Forms12</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Friuts\Bsoft.Friuts4.csproj">
+      <Project>{5698C48E-540F-49ED-ADEE-C39895F12E9E}</Project>
+      <Name>Bsoft.Friuts4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Languages\Languages\Bsoft.Languages5.csproj">
+      <Project>{A7CA1972-5A6A-4819-9BA4-3B9BE0D68A96}</Project>
+      <Name>Bsoft.Languages5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Print\Bsoft.Print6.csproj">
+      <Project>{307DFD83-C329-44E9-A31B-BF55B6512416}</Project>
+      <Name>Bsoft.Print6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Report.Excel\Bsoft.Report.Excel7.csproj">
+      <Project>{68FC494A-71A6-42BB-8438-959BF93EB7F5}</Project>
+      <Name>Bsoft.Report.Excel7</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Report.Print\Bsoft.Report.Print9.csproj">
+      <Project>{9AAD21BA-AC88-44B0-BB48-1EEDB201B503}</Project>
+      <Name>Bsoft.Report.Print9</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft\Bsoft.Reporting\Bsoft.Report.PDF8.csproj">
+      <Project>{4F1D43F7-DED2-4780-9739-E796F6747F46}</Project>
+      <Name>Bsoft.Report.PDF8</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

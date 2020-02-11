@@ -1,0 +1,4 @@
+delete from Acc_Sale;
+delete from Inv_Purchase;
+delete from inv_sale;
+delete from inv_stock;

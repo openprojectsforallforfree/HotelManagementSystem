@@ -1,0 +1,32 @@
+﻿ 
+//always use real userid not fkuserid
+//Relationlist
+//display user id as user name  
+RelationList.Add("User", "SuperAdmin_Rights_Users", "id", "UserId", "colUser");
+
+//Load ComboBox Data  
+ComboBoxDataLoader loader = new ComboBoxDataLoader();
+loader.ComboLoadinfoItems.Add("ID", "EngName", "SuperAdmin_Rights_Users", cboUser, false);
+loader.LoadDataInComboBoxes();
+//Dependant ComboLoad
+ ComboBoxDataLoader loader = new ComboBoxDataLoader();
+
+            loader.ComboLoadinfoItems.Add("ID", "Title", "Hotel_RoomType", cboRoomType, false, ColumnTypes.Number, string.Empty);
+            //loader.ComboLoadinfoItems.Add("ID", "Title", "Hotel_RoomType", cboRoomType , false);
+            loader.ComboLoadinfoItems.AddDependent("Id", "Name", "Hotel_Master_Room", cboRoom, false, ColumnTypes.Number, cboRoomType, "fk_Hotel_RoomType");
+            loader.LoadDataInComboBoxes();
+            
+
+//case statement
+DataTableColumns.Add("CASE WHEN name = 'kumari bank ltd' THEN 'dj bank'  Else 1 END u", ColumnTypes.String, "colName",false ,true ,true ,"u");
+//calculated fields
+DataTableColumns.Add("netamount-dueamt u", ColumnTypes.AmountRound, "colPaid", false, true, true, "u");
+ 
+//Load datatable into grid 
+DataTableColumns.Add("a", ColumnTypes.String, "cola");
+DataTableColumns.Add("b", ColumnTypes.String, "colb");
+LoadDataTable(dt);
+
+//Multiselect with check box
+ FormType = FormTypes.MultipleSelect;
+ selecteddt = GetMultiSelectDataTable();

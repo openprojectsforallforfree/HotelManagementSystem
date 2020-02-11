@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB28F253-11A8-4C11-86A5-8F1B5C10E036}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bsoft.AppCom</RootNamespace>
+    <AssemblyName>Bsoft</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrudeFx.NepaliDate, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\CrudeFx.NepaliDate.dll</HintPath>
+    </Reference>
+    <Reference Include="fsButton, Version=1.0.3566.36784, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\fsButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom12, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address\entAddress.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Address\entAddress.designer.cs">
+      <DependentUpon>entAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\frmPresentVDCMunicipalList.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Address\frmPresentVDCMunicipalList.designer.cs">
+      <DependentUpon>frmPresentVDCMunicipalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\frmPresentVDCMunicipalNew.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Address\frmPresentVDCMunicipalNew.designer.cs">
+      <DependentUpon>frmPresentVDCMunicipalNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\frmSelectVDCMunicipaListView.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Address\frmSelectVDCMunicipaListView.designer.cs">
+      <DependentUpon>frmSelectVDCMunicipaListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\frmSelectVDCMunicipalList.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Address\frmSelectVDCMunicipalList.designer.cs">
+      <DependentUpon>frmSelectVDCMunicipalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\selectAddress.cs" />
+    <Compile Include="BasicForms\frmCompanyOption2.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\frmCompanyOption2.designer.cs">
+      <DependentUpon>frmCompanyOption2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\entRights_User_Group.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\entRights_User_Group.designer.cs">
+      <DependentUpon>entRights_User_Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\frmBackup.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\frmCompany.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\frmCompany.Designer.cs">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\frmFiscalYearSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\frmFiscalYearSelection.Designer.cs">
+      <DependentUpon>frmFiscalYearSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\frmInputBoxMessage.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\frmInputBoxMessage.Designer.cs">
+      <DependentUpon>frmInputBoxMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\frmMnuRights.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\frmMnuRights.Designer.cs">
+      <DependentUpon>frmMnuRights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\frmUserEntry.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\frmUserEntry.designer.cs">
+      <DependentUpon>frmUserEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\frmUserListing.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\frmUserListing.designer.cs">
+      <DependentUpon>frmUserListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\lstRights_User_Group.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementWithRole\lstRights_User_Group.designer.cs">
+      <DependentUpon>lstRights_User_Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserLogin\frmChangePassword.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserLogin\frmChangePassword.designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserLogin\frmNewAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserLogin\frmNewAuthentication.Designer.cs">
+      <DependentUpon>frmNewAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementSimple\Rights_Users_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementSimple\Rights_Users_Ent.designer.cs">
+      <DependentUpon>Rights_Users_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementSimple\Rights_Users_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicForms\UserManagementSimple\Rights_Users_Lst.designer.cs">
+      <DependentUpon>Rights_Users_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicForms\UserRights.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Global\GlobalConfig.cs" />
+    <Compile Include="DML\DMLChangeDBStructure.cs" />
+    <Compile Include="Global\GlobalConstantValues.cs" />
+    <Compile Include="DML\FiscalYearDb.cs" />
+    <Compile Include="Entities\FiscalYear.cs" />
+    <Compile Include="Global\GlobalValues.cs" />
+    <Compile Include="Entities\FiscalYearClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="frmRegister.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="frmRegister.designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormCom.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MainFormCom.designer.cs">
+      <DependentUpon>MainFormCom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Address\entAddress.resx">
+      <DependentUpon>entAddress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\frmPresentVDCMunicipalList.resx">
+      <DependentUpon>frmPresentVDCMunicipalList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\frmPresentVDCMunicipalNew.resx">
+      <DependentUpon>frmPresentVDCMunicipalNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\frmSelectVDCMunicipaListView.resx">
+      <DependentUpon>frmSelectVDCMunicipaListView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\frmSelectVDCMunicipalList.resx">
+      <DependentUpon>frmSelectVDCMunicipalList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\frmCompanyOption2.resx">
+      <DependentUpon>frmCompanyOption2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserManagementWithRole\entRights_User_Group.resx">
+      <DependentUpon>entRights_User_Group.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\frmCompany.resx">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\frmFiscalYearSelection.resx">
+      <DependentUpon>frmFiscalYearSelection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\frmInputBoxMessage.resx">
+      <DependentUpon>frmInputBoxMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserManagementWithRole\frmMnuRights.resx">
+      <DependentUpon>frmMnuRights.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserManagementWithRole\frmUserEntry.resx">
+      <DependentUpon>frmUserEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserManagementWithRole\frmUserListing.resx">
+      <DependentUpon>frmUserListing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserManagementWithRole\lstRights_User_Group.resx">
+      <DependentUpon>lstRights_User_Group.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserLogin\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserLogin\frmNewAuthentication.resx">
+      <DependentUpon>frmNewAuthentication.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserManagementSimple\Rights_Users_Ent.resx">
+      <DependentUpon>Rights_Users_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForms\UserManagementSimple\Rights_Users_Lst.resx">
+      <DependentUpon>Rights_Users_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormCom.resx">
+      <DependentUpon>MainFormCom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Entities\UserInfo.cs" />
+    <Compile Include="DML\DMLUserRightsSimple.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bosft.Controls\Bosft.Controls10.csproj">
+      <Project>{1C39C6DB-C329-461A-94F4-0445911055E3}</Project>
+      <Name>Bosft.Controls10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Common\Bsoft.Common1.csproj">
+      <Project>{4F0D0B88-21A6-4EF5-A888-FFFD23A37CF8}</Project>
+      <Name>Bsoft.Common1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.DataCommon\Bsoft.DataCommon.csproj">
+      <Project>{E5CE0F25-294E-4F31-98BE-11625FE0B326}</Project>
+      <Name>Bsoft.DataCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Data\Bsoft.Data2.csproj">
+      <Project>{84C2624F-732C-4B51-AE62-315ABEAD6C7D}</Project>
+      <Name>Bsoft.Data2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Date\Bsoft.Date3.csproj">
+      <Project>{EED00AEE-AEDA-4904-A92F-28DC8B280E2A}</Project>
+      <Name>Bsoft.Date3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Friuts\Bsoft.Friuts4.csproj">
+      <Project>{5698C48E-540F-49ED-ADEE-C39895F12E9E}</Project>
+      <Name>Bsoft.Friuts4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Design\Bsoft.Design11.csproj">
+      <Project>{A53B2E33-46E6-4509-8910-908AF5D4BB22}</Project>
+      <Name>Bsoft.Design11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Languages\Languages\Bsoft.Languages5.csproj">
+      <Project>{A7CA1972-5A6A-4819-9BA4-3B9BE0D68A96}</Project>
+      <Name>Bsoft.Languages5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bsoft.Report.Excel\Bsoft.Report.Excel7.csproj">
+      <Project>{68FC494A-71A6-42BB-8438-959BF93EB7F5}</Project>
+      <Name>Bsoft.Report.Excel7</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcelExport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\body.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" -n --newline-flush</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,869 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CB6D3AF-C143-48A2-8B16-17C0E6D501D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UEMS</RootNamespace>
+    <AssemblyName>NGOPro</AssemblyName>
+    <ApplicationIcon>doc.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/UEMS/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrudeFx.NepaliDate, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\CrudeFx.NepaliDate.dll</HintPath>
+    </Reference>
+    <Reference Include="fsButton, Version=1.0.3566.36784, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\fsButton.dll</HintPath>
+    </Reference>
+    <Reference Include="ibex35, Version=4.7.1.4, Culture=neutral, PublicKeyToken=bd32d4f9ec352863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\ibex35.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\UEMS Release 27 Dec\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="pdfLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Users\Tu\Desktop\Debug\Protected\pdfLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xebi35, Version=4.7.1.4, Culture=neutral, PublicKeyToken=bd32d4f9ec352863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\xebi35.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicEntry\Address_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicEntry\Address_Ent.designer.cs">
+      <DependentUpon>Address_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicEntry\Address_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicEntry\Address_Lst.designer.cs">
+      <DependentUpon>Address_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicEntry\ContactInformation_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicEntry\ContactInformation_Ent.designer.cs">
+      <DependentUpon>ContactInformation_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicEntry\ContactInformation_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicEntry\ContactInformation_Lst.designer.cs">
+      <DependentUpon>ContactInformation_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicEntry\IndividualPerson_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicEntry\IndividualPerson_Ent.designer.cs">
+      <DependentUpon>IndividualPerson_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicEntry\IndividualPerson_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="BasicEntry\IndividualPerson_Lst.designer.cs">
+      <DependentUpon>IndividualPerson_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\frmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basics\frmAboutBox.designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\Loader.cs" />
+    <Compile Include="BLL\DDL\AddressDb.cs" />
+    <Compile Include="BLL\DDL\BasicDb.cs" />
+    <Compile Include="BLL\DDL\JoinDb.cs" />
+    <Compile Include="BLL\DDL\Principal.cs" />
+    <Compile Include="BLL\DDL\MasterDb.cs" />
+    <Compile Include="BLL\DDL\GeneralDb.cs" />
+    <Compile Include="BLL\DDL\UserRights.cs" />
+    <Compile Include="BLL\View\NGORView.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporter.Designer.cs">
+      <DependentUpon>frmReporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalValues.cs" />
+    <Compile Include="JoinForm\NGO_AffiliationOrganization_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_AffiliationOrganization_Ent.designer.cs">
+      <DependentUpon>NGO_AffiliationOrganization_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_AffiliationOrganization_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_AffiliationOrganization_Lst.designer.cs">
+      <DependentUpon>NGO_AffiliationOrganization_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Budget_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Budget_Ent.designer.cs">
+      <DependentUpon>NGO_Budget_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Budget_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Budget_Lst.designer.cs">
+      <DependentUpon>NGO_Budget_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Document_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Document_Ent.designer.cs">
+      <DependentUpon>NGO_Document_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Document_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Document_Lst.designer.cs">
+      <DependentUpon>NGO_Document_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_HelpingOrganization_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_HelpingOrganization_Ent.designer.cs">
+      <DependentUpon>NGO_HelpingOrganization_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_HelpingOrganization_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_HelpingOrganization_Lst.designer.cs">
+      <DependentUpon>NGO_HelpingOrganization_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Member_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Member_Ent.designer.cs">
+      <DependentUpon>NGO_Member_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Member_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Member_Lst.designer.cs">
+      <DependentUpon>NGO_Member_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Objective_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Objective_Ent.designer.cs">
+      <DependentUpon>NGO_Objective_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Objective_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_Objective_Lst.designer.cs">
+      <DependentUpon>NGO_Objective_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_WorkingArea_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_WorkingArea_Ent.designer.cs">
+      <DependentUpon>NGO_WorkingArea_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_WorkingArea_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_WorkingArea_Lst.designer.cs">
+      <DependentUpon>NGO_WorkingArea_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_YearlyReport_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_YearlyReport_Ent.designer.cs">
+      <DependentUpon>NGO_YearlyReport_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\NGO_YearlyReport_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\NGO_YearlyReport_Lst.designer.cs">
+      <DependentUpon>NGO_YearlyReport_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\Tasks_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\Tasks_Ent.designer.cs">
+      <DependentUpon>Tasks_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\Tasks_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\Tasks_Lst.designer.cs">
+      <DependentUpon>Tasks_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\WorkDone_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\WorkDone_Ent.designer.cs">
+      <DependentUpon>WorkDone_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\WorkDone_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\YearlyRpt\WorkDone_Lst.designer.cs">
+      <DependentUpon>WorkDone_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\SubjectiveWrk_NGO_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\SubjectiveWrk_NGO_Ent.designer.cs">
+      <DependentUpon>SubjectiveWrk_NGO_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\SubjectiveWrk_NGO_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\SubjectiveWrk_NGO_Lst.designer.cs">
+      <DependentUpon>SubjectiveWrk_NGO_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\TargetAudienceText_NGO_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\TargetAudienceText_NGO_Ent.designer.cs">
+      <DependentUpon>TargetAudienceText_NGO_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\TargetAudienceText_NGO_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\TargetAudienceText_NGO_Lst.designer.cs">
+      <DependentUpon>TargetAudienceText_NGO_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\WorkDone_NGO_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\WorkDone_NGO_Ent.designer.cs">
+      <DependentUpon>WorkDone_NGO_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinForm\WorkDone_NGO_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="JoinForm\WorkDone_NGO_Lst.designer.cs">
+      <DependentUpon>WorkDone_NGO_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\CustomerType_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\CustomerType_Ent.designer.cs">
+      <DependentUpon>CustomerType_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\CustomerType_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\CustomerType_Lst.designer.cs">
+      <DependentUpon>CustomerType_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\Customer_Master_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\Customer_Master_Ent.designer.cs">
+      <DependentUpon>Customer_Master_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\Customer_Master_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\Customer_Master_Lst.designer.cs">
+      <DependentUpon>Customer_Master_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Ent.designer.cs">
+      <DependentUpon>FinancialSource_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Lst.designer.cs">
+      <DependentUpon>FinancialSource_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Ent.designer.cs">
+      <DependentUpon>FiscalYears_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Lst.designer.cs">
+      <DependentUpon>FiscalYears_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\HelpingOrganization_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\HelpingOrganization_Ent.designer.cs">
+      <DependentUpon>HelpingOrganization_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\HelpingOrganization_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\HelpingOrganization_Lst.designer.cs">
+      <DependentUpon>HelpingOrganization_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalEntry\RenualOfRegistraion_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="PrincipalEntry\RenualOfRegistraion_Ent.designer.cs">
+      <DependentUpon>RenualOfRegistraion_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalEntry\RenualOfRegistraion_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="PrincipalEntry\RenualOfRegistraion_Lst.designer.cs">
+      <DependentUpon>RenualOfRegistraion_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalEntry\YearlyReport_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="PrincipalEntry\YearlyReport_Lst.designer.cs">
+      <DependentUpon>YearlyReport_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HelpingOrganization_View.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Views\HelpingOrganization_View.designer.cs">
+      <DependentUpon>HelpingOrganization_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\Master_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\Master_Ent.designer.cs">
+      <DependentUpon>Master_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\Master_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\Master_Lst.designer.cs">
+      <DependentUpon>Master_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalEntry\NGO_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="PrincipalEntry\NGO_Ent.designer.cs">
+      <DependentUpon>NGO_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalEntry\NGO_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="PrincipalEntry\NGO_Lst.designer.cs">
+      <DependentUpon>NGO_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalEntry\YearlyReport_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="PrincipalEntry\YearlyReport_Ent.designer.cs">
+      <DependentUpon>YearlyReport_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\entNGOsample.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Template\entNGOsample.designer.cs">
+      <DependentUpon>entNGOsample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frmEntrySample.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Template\frmEntrySample.designer.cs">
+      <DependentUpon>frmEntrySample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frmListSample.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Template\frmListSample.designer.cs">
+      <DependentUpon>frmListSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\DDL\ChangeDBStructure.cs" />
+    <Compile Include="MasterEntry\frmMasterEntry.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\frmMasterEntry.designer.cs">
+      <DependentUpon>frmMasterEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\frmMasterEntryList.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\frmMasterEntryList.designer.cs">
+      <DependentUpon>frmMasterEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BasicEntry\Address_Ent.resx">
+      <DependentUpon>Address_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicEntry\Address_Lst.resx">
+      <DependentUpon>Address_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicEntry\ContactInformation_Ent.resx">
+      <DependentUpon>ContactInformation_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicEntry\ContactInformation_Lst.resx">
+      <DependentUpon>ContactInformation_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicEntry\IndividualPerson_Ent.resx">
+      <DependentUpon>IndividualPerson_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicEntry\IndividualPerson_Lst.resx">
+      <DependentUpon>IndividualPerson_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basics\frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporter.resx">
+      <DependentUpon>frmReporter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_AffiliationOrganization_Ent.resx">
+      <DependentUpon>NGO_AffiliationOrganization_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_AffiliationOrganization_Lst.resx">
+      <DependentUpon>NGO_AffiliationOrganization_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Budget_Ent.resx">
+      <DependentUpon>NGO_Budget_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Budget_Lst.resx">
+      <DependentUpon>NGO_Budget_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Document_Ent.resx">
+      <DependentUpon>NGO_Document_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Document_Lst.resx">
+      <DependentUpon>NGO_Document_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_HelpingOrganization_Ent.resx">
+      <DependentUpon>NGO_HelpingOrganization_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_HelpingOrganization_Lst.resx">
+      <DependentUpon>NGO_HelpingOrganization_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Member_Ent.resx">
+      <DependentUpon>NGO_Member_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Member_Lst.resx">
+      <DependentUpon>NGO_Member_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Objective_Ent.resx">
+      <DependentUpon>NGO_Objective_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_Objective_Lst.resx">
+      <DependentUpon>NGO_Objective_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_WorkingArea_Ent.resx">
+      <DependentUpon>NGO_WorkingArea_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_WorkingArea_Lst.resx">
+      <DependentUpon>NGO_WorkingArea_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_YearlyReport_Ent.resx">
+      <DependentUpon>NGO_YearlyReport_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\NGO_YearlyReport_Lst.resx">
+      <DependentUpon>NGO_YearlyReport_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\YearlyRpt\Tasks_Ent.resx">
+      <DependentUpon>Tasks_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\YearlyRpt\Tasks_Lst.resx">
+      <DependentUpon>Tasks_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\YearlyRpt\WorkDone_Ent.resx">
+      <DependentUpon>WorkDone_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\YearlyRpt\WorkDone_Lst.resx">
+      <DependentUpon>WorkDone_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\SubjectiveWrk_NGO_Ent.resx">
+      <DependentUpon>SubjectiveWrk_NGO_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\SubjectiveWrk_NGO_Lst.resx">
+      <DependentUpon>SubjectiveWrk_NGO_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\TargetAudienceText_NGO_Ent.resx">
+      <DependentUpon>TargetAudienceText_NGO_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\TargetAudienceText_NGO_Lst.resx">
+      <DependentUpon>TargetAudienceText_NGO_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\WorkDone_NGO_Ent.resx">
+      <DependentUpon>WorkDone_NGO_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinForm\WorkDone_NGO_Lst.resx">
+      <DependentUpon>WorkDone_NGO_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\CustomerType_Ent.resx">
+      <DependentUpon>CustomerType_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\CustomerType_Lst.resx">
+      <DependentUpon>CustomerType_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\Customer_Master_Ent.resx">
+      <DependentUpon>Customer_Master_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\Customer_Master_Lst.resx">
+      <DependentUpon>Customer_Master_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FinancialSource_Ent.resx">
+      <DependentUpon>FinancialSource_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FinancialSource_Lst.resx">
+      <DependentUpon>FinancialSource_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FiscalYears_Ent.resx">
+      <DependentUpon>FiscalYears_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FiscalYears_Lst.resx">
+      <DependentUpon>FiscalYears_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\HelpingOrganization_Ent.resx">
+      <DependentUpon>HelpingOrganization_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\HelpingOrganization_Lst.resx">
+      <DependentUpon>HelpingOrganization_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\Master_Ent.resx">
+      <DependentUpon>Master_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\Master_Lst.resx">
+      <DependentUpon>Master_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalEntry\NGO_Ent.resx">
+      <DependentUpon>NGO_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalEntry\NGO_Lst.resx">
+      <DependentUpon>NGO_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalEntry\RenualOfRegistraion_Ent.resx">
+      <DependentUpon>RenualOfRegistraion_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalEntry\RenualOfRegistraion_Lst.resx">
+      <DependentUpon>RenualOfRegistraion_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalEntry\YearlyReport_Ent.resx">
+      <DependentUpon>YearlyReport_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalEntry\YearlyReport_Lst.resx">
+      <DependentUpon>YearlyReport_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\entNGOsample.resx">
+      <DependentUpon>entNGOsample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmEntrySample.resx">
+      <DependentUpon>frmEntrySample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmListSample.resx">
+      <DependentUpon>frmListSample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\frmMasterEntry.resx">
+      <DependentUpon>frmMasterEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\frmMasterEntryList.resx">
+      <DependentUpon>frmMasterEntryList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HelpingOrganization_View.resx">
+      <DependentUpon>HelpingOrganization_View.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\lstNGO_ObjectiveView.resx">
+      <DependentUpon>lstNGO_ObjectiveView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PersonView_Lst.resx">
+      <DependentUpon>PersonView_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>
+      </SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Views\lstNGO_ObjectiveView.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Views\lstNGO_ObjectiveView.designer.cs">
+      <DependentUpon>lstNGO_ObjectiveView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonView_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Views\PersonView_Lst.designer.cs">
+      <DependentUpon>PersonView_Lst.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{5AD368F8-9AD3-4E4C-97D8-1F4F1C124158}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="doc.ico" />
+    <Content Include="full-basket.ico" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\Reports %282%29.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\student.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\ExcelExport.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\system.png" />
+    <None Include="Resources\man.png" />
+    <None Include="Resources\Marks.png" />
+    <None Include="Resources\body_low.png" />
+    <None Include="Resources\SplashScreen.PNG" />
+    <None Include="Resources\SplashScreen copy.png" />
+    <None Include="Resources\SplashScreen copy copy.png" />
+    <None Include="Resources\body.png" />
+    <None Include="Resources\AddNew1.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\index.jpg" />
+    <None Include="Resources\index - Copy.jpg" />
+    <None Include="Resources\index.png" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bsoft\Bosft.Controls\Bosft.Controls10.csproj">
+      <Project>{1C39C6DB-C329-461A-94F4-0445911055E3}</Project>
+      <Name>Bosft.Controls10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.AppCom\Bsoft.AppCom.csproj">
+      <Project>{EB28F253-11A8-4C11-86A5-8F1B5C10E036}</Project>
+      <Name>Bsoft.AppCom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Common\Bsoft.Common1.csproj">
+      <Project>{4F0D0B88-21A6-4EF5-A888-FFFD23A37CF8}</Project>
+      <Name>Bsoft.Common1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Data\Bsoft.Data2.csproj">
+      <Project>{84C2624F-732C-4B51-AE62-315ABEAD6C7D}</Project>
+      <Name>Bsoft.Data2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Design\Bsoft.Design11.csproj">
+      <Project>{A53B2E33-46E6-4509-8910-908AF5D4BB22}</Project>
+      <Name>Bsoft.Design11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Forms\Bsoft.Forms12.csproj">
+      <Project>{8598F7FD-CF7F-4F30-83C4-AC188B8DDD21}</Project>
+      <Name>Bsoft.Forms12</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Friuts\Bsoft.Friuts4.csproj">
+      <Project>{5698C48E-540F-49ED-ADEE-C39895F12E9E}</Project>
+      <Name>Bsoft.Friuts4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Languages\Languages\Bsoft.Languages5.csproj">
+      <Project>{A7CA1972-5A6A-4819-9BA4-3B9BE0D68A96}</Project>
+      <Name>Bsoft.Languages5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Print\Bsoft.Print6.csproj">
+      <Project>{307DFD83-C329-44E9-A31B-BF55B6512416}</Project>
+      <Name>Bsoft.Print6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Report.Excel\Bsoft.Report.Excel7.csproj">
+      <Project>{68FC494A-71A6-42BB-8438-959BF93EB7F5}</Project>
+      <Name>Bsoft.Report.Excel7</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reports\NGORReports.csproj">
+      <Project>{2E728B05-1FBE-4C1A-BB35-8330B2DFF047}</Project>
+      <Name>NGORReports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" -n --newline-flush</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,11 @@
+10:43 PM 7/30/2010 Made Fruits useful for check box in the grid 
+12:58 PM 8/19/2010 Added lister control ,it can be used to set values based on the data table provided uses title and value only 3 hrs
+8:51 AM 9/11/2010 Added Bsoft.Reporting
+9:00 AM 9/13/2010 divided bsoft.data so that now data engine is dynamic
+
+10:23 PM 9/18/2010 double key (trial with 5 letter "IAMDHIRAJBAJRACHARYAWISEST" and with hash applied)
+8:41 PM 7/10/2011 Bsoft.CrystalReport added
+12:49 PM 8/6/2011 corrected the blank rows at last of list
+5:18 PM 8/14/2011 Wow added the add new item feature in the combo box load ... removed many unwanteds from comboloader , organized it
+10:44 PM 9/14/2011 Bug of double click being required was solved after trial of 2 hr found that the culprit is set lang (  InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(TypeOfLanguage) ) so removed this call in leav event so , font will not be set to original value on the leave event.
+9:28 AM 5/12/2012 Tablename in listing form and entry form can be different (If its same then it is enough to mention in the listing form no need to mention tableName in entry also if its same.)

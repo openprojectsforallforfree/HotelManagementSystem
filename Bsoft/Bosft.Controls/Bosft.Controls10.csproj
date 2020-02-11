@@ -1,0 +1,350 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C39C6DB-C329-461A-94F4-0445911055E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bsoft.Controls</RootNamespace>
+    <AssemblyName>Syscom10</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conversion.cs" />
+    <Compile Include="ctrlJournal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlJournal.Designer.cs">
+      <DependentUpon>ctrlJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customDataGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customDataGrid.designer.cs">
+      <DependentUpon>customDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateFromTo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateFromTo.Designer.cs">
+      <DependentUpon>DateFromTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateFromTo2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateFromTo2.Designer.cs">
+      <DependentUpon>DateFromTo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Discount.designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiscountControl.Designer.cs">
+      <DependentUpon>DiscountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flwGeneric.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="flwGeneric.Designer.cs">
+      <DependentUpon>flwGeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GanttChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphicsExtension.cs" />
+    <Compile Include="LblComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LblComboBox.Designer.cs">
+      <DependentUpon>LblComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupRadioButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupRadioButton.designer.cs">
+      <DependentUpon>GroupRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LableFlowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LableFlowLayout.designer.cs">
+      <DependentUpon>LableFlowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lblGeneric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lblGeneric.Designer.cs">
+      <DependentUpon>lblGeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LblTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LblTextBox.Designer.cs">
+      <DependentUpon>LblTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lblTxtSmall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lblTxtSmall.Designer.cs">
+      <DependentUpon>lblTxtSmall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lister.designer.cs">
+      <DependentUpon>lister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listerGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="listerGrid.designer.cs">
+      <DependentUpon>listerGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menuView.designer.cs">
+      <DependentUpon>menuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multichoiceCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="multichoiceCheckBox.Designer.cs">
+      <DependentUpon>multichoiceCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multiChoiceTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="multiChoiceTextBox.Designer.cs">
+      <DependentUpon>multiChoiceTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RoundRectButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundRectButton.Designer.cs">
+      <DependentUpon>RoundRectButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tableCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tableCtrl.designer.cs">
+      <DependentUpon>tableCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabOrderManager.cs" />
+    <Compile Include="Tags.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tags.designer.cs">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tester.Designer.cs">
+      <DependentUpon>tester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="timespan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="timespan.designer.cs">
+      <DependentUpon>timespan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriStateTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtShadowTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtShadowTextBox.Designer.cs">
+      <DependentUpon>txtShadowTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VtextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VtextBox.Designer.cs">
+      <DependentUpon>VtextBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ctrlJournal.resx">
+      <DependentUpon>ctrlJournal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customDataGrid.resx">
+      <DependentUpon>customDataGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateFromTo.resx">
+      <DependentUpon>DateFromTo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateFromTo2.resx">
+      <DependentUpon>DateFromTo2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscountControl.resx">
+      <DependentUpon>DiscountControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flwGeneric.resx">
+      <DependentUpon>flwGeneric.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LblComboBox.resx">
+      <DependentUpon>LblComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupRadioButton.resx">
+      <DependentUpon>GroupRadioButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LableFlowLayout.resx">
+      <DependentUpon>LableFlowLayout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lblGeneric.resx">
+      <DependentUpon>lblGeneric.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LblTextBox.resx">
+      <DependentUpon>LblTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lblTxtSmall.resx">
+      <DependentUpon>lblTxtSmall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lister.resx">
+      <DependentUpon>lister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listerGrid.resx">
+      <DependentUpon>listerGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuView.resx">
+      <DependentUpon>menuView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="multichoiceCheckBox.resx">
+      <DependentUpon>multichoiceCheckBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="multiChoiceTextBox.resx">
+      <DependentUpon>multiChoiceTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tableCtrl.resx">
+      <DependentUpon>tableCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tags.resx">
+      <DependentUpon>Tags.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tester.resx">
+      <DependentUpon>tester.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="timespan.resx">
+      <DependentUpon>timespan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriStateTreeView.resx">
+      <DependentUpon>TriStateTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="txtShadowTextBox.resx">
+      <DependentUpon>txtShadowTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VtextBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VtextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bsoft.Common\Bsoft.Common1.csproj">
+      <Project>{4F0D0B88-21A6-4EF5-A888-FFFD23A37CF8}</Project>
+      <Name>Bsoft.Common1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man.ico" />
+    <None Include="Resources\student.ico" />
+    <None Include="Resources\Man.png" />
+    <Content Include="student.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" -n --newline-flush</PostBuildEvent>
+  </PropertyGroup>
+</Project>

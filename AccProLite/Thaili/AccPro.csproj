@@ -1,0 +1,352 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F8D861E-6EBE-47C2-A4C3-44900CD8650F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UEMS</RootNamespace>
+    <AssemblyName>EduPro</AssemblyName>
+    <ApplicationIcon>doc.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/UEMS/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrudeFx.NepaliDate, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\CrudeFx.NepaliDate.dll</HintPath>
+    </Reference>
+    <Reference Include="fsButton, Version=1.0.3566.36784, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\fsButton.dll</HintPath>
+    </Reference>
+    <Reference Include="ibex35, Version=4.7.1.4, Culture=neutral, PublicKeyToken=bd32d4f9ec352863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependancy\ibex35.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\UEMS Release 27 Dec\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="pdfLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Users\Tu\Desktop\Debug\Protected\pdfLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acc\frmAccount.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Acc\frmAccount.designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\frmAccountGroupEntry.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Acc\frmAccountGroupEntry.designer.cs">
+      <DependentUpon>frmAccountGroupEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\frmAccountGroupList.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Acc\frmAccountGroupList.designer.cs">
+      <DependentUpon>frmAccountGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\frmAccountList.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Acc\frmAccountList.designer.cs">
+      <DependentUpon>frmAccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\frmJournal.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Acc\frmJournal.designer.cs">
+      <DependentUpon>frmJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\frmJournalList.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Acc\frmJournalList.designer.cs">
+      <DependentUpon>frmJournalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\frmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basics\frmAboutBox.designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basics\Loader.cs" />
+    <Compile Include="BLL\DDL\AddressDb.cs" />
+    <Compile Include="BLL\DDL\BasicDb.cs" />
+    <Compile Include="BLL\DDL\JoinDb.cs" />
+    <Compile Include="BLL\DDL\Principal.cs" />
+    <Compile Include="BLL\DDL\MasterDb.cs" />
+    <Compile Include="BLL\DDL\FiscalYearDb.cs" />
+    <Compile Include="BLL\DDL\GeneralDb.cs" />
+    <Compile Include="BLL\DDL\UserRights.cs" />
+    <Compile Include="BLL\View\NGORView.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Ent.designer.cs">
+      <DependentUpon>FinancialSource_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FinancialSource_Lst.designer.cs">
+      <DependentUpon>FinancialSource_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Ent.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Ent.designer.cs">
+      <DependentUpon>FiscalYears_Ent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Lst.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry\FiscalYears_Lst.designer.cs">
+      <DependentUpon>FiscalYears_Lst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\DDL\ChangeDBStructure.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Acc\frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\frmAccountGroupEntry.resx">
+      <DependentUpon>frmAccountGroupEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\frmAccountGroupList.resx">
+      <DependentUpon>frmAccountGroupList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\frmAccountList.resx">
+      <DependentUpon>frmAccountList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\frmJournal.resx">
+      <DependentUpon>frmJournal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\frmJournalList.resx">
+      <DependentUpon>frmJournalList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basics\frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FinancialSource_Ent.resx">
+      <DependentUpon>FinancialSource_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FinancialSource_Lst.resx">
+      <DependentUpon>FinancialSource_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FiscalYears_Ent.resx">
+      <DependentUpon>FiscalYears_Ent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry\FiscalYears_Lst.resx">
+      <DependentUpon>FiscalYears_Lst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>
+      </SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{5AD368F8-9AD3-4E4C-97D8-1F4F1C124158}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="doc.ico" />
+    <Content Include="full-basket.ico" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\Reports %282%29.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\student.png" />
+    <None Include="Resources\student %284%29.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\New1.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\ExcelExport.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\system.png" />
+    <None Include="Resources\man.png" />
+    <None Include="Resources\Marks.png" />
+    <None Include="Resources\body_low.png" />
+    <None Include="Resources\SplashScreen.PNG" />
+    <None Include="Resources\SplashScreen copy.png" />
+    <None Include="Resources\SplashScreen copy copy.png" />
+    <None Include="Resources\body.png" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bsoft\Bosft.Controls\Bosft.Controls10.csproj">
+      <Project>{1C39C6DB-C329-461A-94F4-0445911055E3}</Project>
+      <Name>Bosft.Controls10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.AppCom\Bsoft.AppCom.csproj">
+      <Project>{EB28F253-11A8-4C11-86A5-8F1B5C10E036}</Project>
+      <Name>Bsoft.AppCom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Common\Bsoft.Common1.csproj">
+      <Project>{4F0D0B88-21A6-4EF5-A888-FFFD23A37CF8}</Project>
+      <Name>Bsoft.Common1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Data\Bsoft.Data2.csproj">
+      <Project>{84C2624F-732C-4B51-AE62-315ABEAD6C7D}</Project>
+      <Name>Bsoft.Data2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Design\Bsoft.Design11.csproj">
+      <Project>{A53B2E33-46E6-4509-8910-908AF5D4BB22}</Project>
+      <Name>Bsoft.Design11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Forms\Bsoft.Forms12.csproj">
+      <Project>{8598F7FD-CF7F-4F30-83C4-AC188B8DDD21}</Project>
+      <Name>Bsoft.Forms12</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Friuts\Bsoft.Friuts4.csproj">
+      <Project>{5698C48E-540F-49ED-ADEE-C39895F12E9E}</Project>
+      <Name>Bsoft.Friuts4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Languages\Languages\Bsoft.Languages5.csproj">
+      <Project>{A7CA1972-5A6A-4819-9BA4-3B9BE0D68A96}</Project>
+      <Name>Bsoft.Languages5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Print\Bsoft.Print6.csproj">
+      <Project>{307DFD83-C329-44E9-A31B-BF55B6512416}</Project>
+      <Name>Bsoft.Print6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Report.Excel\Bsoft.Report.Excel7.csproj">
+      <Project>{68FC494A-71A6-42BB-8438-959BF93EB7F5}</Project>
+      <Name>Bsoft.Report.Excel7</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Report.Print\Bsoft.Report.Print9.csproj">
+      <Project>{9AAD21BA-AC88-44B0-BB48-1EEDB201B503}</Project>
+      <Name>Bsoft.Report.Print9</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bsoft\Bsoft.Reporting\Bsoft.Report.PDF8.csproj">
+      <Project>{4F1D43F7-DED2-4780-9739-E796F6747F46}</Project>
+      <Name>Bsoft.Report.PDF8</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
